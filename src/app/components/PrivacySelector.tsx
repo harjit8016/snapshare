@@ -21,31 +21,37 @@ export function PrivacySelector({ value, password, onChange }: PrivacySelectorPr
         value={value}
         onValueChange={(val) => onChange(val as 'public' | 'private', password)}
       >
-        <div className="flex items-start space-x-3 rounded-lg border border-gray-200 p-4 hover:bg-gray-50 cursor-pointer">
+        <label
+          htmlFor="public"
+          className="flex items-start space-x-3 rounded-lg border border-gray-200 p-4 hover:bg-gray-50 cursor-pointer select-none"
+        >
           <RadioGroupItem value="public" id="public" className="mt-1" />
           <div className="flex-1">
-            <Label htmlFor="public" className="cursor-pointer font-medium flex items-center gap-2">
+            <span className="font-medium flex items-center gap-2">
               <Globe className="w-4 h-4 text-green-600" />
               Public
-            </Label>
+            </span>
             <p className="text-sm text-gray-600 mt-1">
               Anyone with the link can view this image
             </p>
           </div>
-        </div>
+        </label>
         
-        <div className="flex items-start space-x-3 rounded-lg border border-gray-200 p-4 hover:bg-gray-50 cursor-pointer">
+        <label
+          htmlFor="private"
+          className="flex items-start space-x-3 rounded-lg border border-gray-200 p-4 hover:bg-gray-50 cursor-pointer select-none"
+        >
           <RadioGroupItem value="private" id="private" className="mt-1" />
           <div className="flex-1">
-            <Label htmlFor="private" className="cursor-pointer font-medium flex items-center gap-2">
+            <span className="font-medium flex items-center gap-2">
               <Lock className="w-4 h-4 text-purple-600" />
               Private (Password Protected)
-            </Label>
+            </span>
             <p className="text-sm text-gray-600 mt-1">
               Requires password to view the image
             </p>
           </div>
-        </div>
+        </label>
       </RadioGroup>
 
       {value === 'private' && (
