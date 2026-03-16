@@ -1,0 +1,16 @@
+{
+  "name": "Snapshare - Modern Image Hosting",
+  "short_name": "Snapshare",
+  "description": "Free image sharing app. Upload and store photos online for free.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
